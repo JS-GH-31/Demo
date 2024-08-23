@@ -1,49 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WW2 Storyboard Demo</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>D-Day Invasion - June 6, 1944</h1>
-    </header>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    color: #333;
+    padding: 20px;
+}
 
-    <section id="scene1">
-        <h2>Scene 1: The Landing</h2>
-        <p>You’re aboard a landing craft, packed shoulder-to-shoulder with fellow soldiers. The shoreline of Omaha Beach looms ahead, dotted with enemy fortifications. As the ramp drops, chaos erupts.</p>
+header {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
 
-        <div class="choices">
-            <button onclick="showOutcome('cover')">Run towards the nearest cover.</button>
-            <button onclick="showOutcome('tank')">Follow the tank for protection.</button>
-            <button onclick="showOutcome('wait')">Lay low and wait for reinforcements.</button>
-        </div>
+h1, h2 {
+    margin: 0 0 20px;
+}
 
-        <div id="outcome-cover" class="outcome">
-            <p>Outcome: You dive behind a steel hedgehog, catching your breath as bullets whiz by.</p>
-            <img src="images/cover.jpg" alt="Soldiers diving behind steel obstacles on a chaotic beach, with explosions in the background.">
-        </div>
+.choices {
+    margin: 20px 0;
+}
 
-        <div id="outcome-tank" class="outcome">
-            <p>Outcome: The tank shields you, but becomes a target. You must decide to stay or break away.</p>
-            <img src="images/tank.jpg" alt="A Sherman tank advancing, with soldiers huddled close and enemy fire impacting nearby.">
-        </div>
+.choices button {
+    display: block;
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        <div id="outcome-wait" class="outcome">
-            <p>Outcome: Waiting spares you from immediate danger, but you’re eventually forced to move as the situation intensifies.</p>
-            <img src="images/wait.jpg" alt="A soldier lying flat on the sand, surrounded by the chaos of battle.">
-        </div>
-    </section>
+.choices button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
 
-    <nav>
-        <a href="#scene2">Next Scene: Securing the Beachhead</a>
-    </nav>
+.outcome {
+    display: none;
+    margin-top: 20px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.outcome img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+nav a {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
 <img src="images/cover.jpg" alt="Soldiers diving behind steel obstacles on a chaotic beach, with explosions in the background.">
 <img src="images/tank.jpg" alt="A Sherman tank advancing, with soldiers huddled close and enemy fire impacting nearby.">
 <img src="images/wait.jpg" alt="A soldier lying flat on the sand, surrounded by the chaos of battle.">
